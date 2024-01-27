@@ -1,23 +1,24 @@
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contacts from "./components/Contacts"
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contacts from "./pages/Contacts"
+import Footer from './components/Footer'
+import Header from "./components/Header";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <AnimatePresence>
       <BrowserRouter>
-      <Navbar />
+        <Header />
         <Routes>
-          <Route path="/" element= {<Home/>} />
-          <Route path="/skills" element= {<Skills/>} />
-          <Route path="/projects" element= {<Projects/>} />
-          <Route path="/contacts" element= {<Contacts/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </AnimatePresence>
   );

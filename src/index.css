@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,12 +7,35 @@
 
 
 @layer base {
+
   body {
     font-family: "Poppins", sans-serif;
+    background-color: #f7f7f7;
   }
 
   li {
-    @apply px-4;
     @apply cursor-pointer;
+    /* @apply duration-75 ease-in hover:scale-110 hover:text-[#7c7cb3] hover:font-bold; */
   }
+
+  body::-webkit-scrollbar-horizontal {
+    display: none;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#9191b3]; /* Colore della barra di scorrimento */
+    @apply rounded-full;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-300; /* Colore dello sfondo della barra di scorrimento */
+  }
+}
+
+.active{
+  @apply px-3 font-bold border-b-4 border-[#7c7cb3] duration-300;
 }

@@ -1,33 +1,48 @@
 import React from "react";
-import skills from "../skillsData/skills";
 import { motion } from "framer-motion";
+import skills from '../skillsData/skills'
+import { fadeIn } from "../utils/variants";
+
 
 const Skills = () => {
   return (
-    <motion.div
-      className="flex flex-col items-center justify-center pt-[100px] w-full min-h-screen gap-5 mx-auto"
-      initial={{ scaleY: 0 }}
-      animate={{ scaleY: 1 }}
-      exit={{ scaleY: 0 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <h1 className="text-4xl text-[#7c7cb3] font-bold text-center md:text-5xl">
-        Skills:
-      </h1>
-      <div className="grid grid-cols-3 gap-10 p-10 mx-auto text-center md:grid-cols-5">
-        {skills.map((skill, index) => (
-          <div key={index} className="duration-100 hover:scale-110">
-            <img
-              src={skill.icon}
-              className="mx-auto max-w-[60px] md:max-w-[120px]"
-              alt={`${skill.name} Icon`}
-            />
-            <p className="py-4 text-[10px] md:text-[15px]">{skill.name}</p>
+    <>
+      <section className="flex items-center justify-center min-h-screen md:flex">
+        <div className="grid items-center gap-0 md:gap-12 justify-items-center md:justify-items-start">
+          <motion.div
+            className="mt-20 md:mt-0 text-2xl md:text-5xl font-bold text-[#7c7cb3] text-center md:text-left relative w-fit "
+            variants={fadeIn("right", 0.1)}
+            initial={"hidden"}
+            whileInView={"show"}
+          >
+            My evolving skill-set<span className="text-orange-700 ">*</span>
+            <span className="-z-1 absolute top-4 left-3 md:top-5 md:left-4 bg-[#7c7cb3]/10 h-[15px] w-full md:h-[35px]"></span>
+          </motion.div>
+
+          <div className="grid grid-cols-3 py-10 gap-3 md:gap-10 text-[12px] text-center md:grid-cols-10 bg-white shadow-lg">
+            {skills.map((skill, index) => (
+              <motion.div
+                key={index}
+                className={skill.class}
+                variants={fadeIn("up", skill.duration)}
+                initial={"hidden"}
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.7 }}
+              >
+                <img
+                  src={skill.icon}
+                  className="w-16"
+                  alt={`${skill.name} Icon`}
+                />
+                <p className="mt-1">{skill.name}</p>
+              </motion.div>
+            ))}
           </div>
-        ))}
-      </div>
-    </motion.div>
+        </div>
+      </section>
+    </>
   );
 };
 
 export default Skills;
+
