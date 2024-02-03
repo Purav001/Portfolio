@@ -1,40 +1,55 @@
 import React from "react";
+import skills from '../Data/skills'
 import { motion } from "framer-motion";
-import skills from '../skillsData/skills'
 import { fadeIn } from "../utils/variants";
+import TextSpan from '../utils/textSpan';
 
 
 const Skills = () => {
+
+  const name = "My skill-set.".split("");
+
   return (
     <>
-      <section className="flex items-center justify-center min-h-screen md:flex">
-        <div className="grid items-center gap-0 md:gap-12 justify-items-center md:justify-items-start">
+      <section className="flex items-center justify-center min-h-screen pb-10 md:flex">
+        {/*title*/}
+        <div className="grid items-center gap-0 md:gap-12 justify-items-center">
           <motion.div
-            className="mt-20 md:mt-0 text-2xl md:text-5xl font-bold text-[#7c7cb3] text-center md:text-left relative w-fit "
+            className="relative mt-20 mb-10 text-2xl font-bold text-center md:mt-0 md:mb-0 md:text-3xl lg:text-6xl text-v "
             variants={fadeIn("right", 0.1)}
             initial={"hidden"}
             whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
           >
-            My evolving skill-set<span className="text-orange-700 ">*</span>
-            <span className="-z-1 absolute top-4 left-3 md:top-5 md:left-4 bg-[#7c7cb3]/10 h-[15px] w-full md:h-[35px]"></span>
+            {name.map((letter, index) => {
+              return (
+                <TextSpan key={index}>
+                  {letter === " " ? "\u00A0" : letter}
+                </TextSpan>
+              );
+            })}
           </motion.div>
 
-          <div className="grid grid-cols-3 py-10 gap-3 md:gap-10 text-[12px] text-center md:grid-cols-10 bg-white shadow-lg">
+          {/*skills*/}
+          <div className="grid grid-cols-4 gap-5 mx-10 lg:grid-cols-5 lg:gap-10">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
-                className={skill.class}
+                className={`flex flex-col w-[70px] h-[70px] lg:w-[100px] lg:h-[100px] rounded-[10px] items-center justify-center bg-white shadow-lg ${skill.shadow}`}
                 variants={fadeIn("up", skill.duration)}
                 initial={"hidden"}
                 whileInView={"show"}
+                whileHover={{
+                  scale: 1.2,
+                  transition: { duration: 0.1 },
+                }}
                 viewport={{ once: false, amount: 0.7 }}
               >
                 <img
                   src={skill.icon}
-                  className="w-16"
+                  className="w-12 lg:w-16"
                   alt={`${skill.name} Icon`}
                 />
-                <p className="mt-1">{skill.name}</p>
               </motion.div>
             ))}
           </div>

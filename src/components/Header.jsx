@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../images/Logo.png";
 import Logo2 from "../images/Logo2.png";
-import { HiOutlineMenuAlt3 } from "react-icons/hi";
-import { IoIosClose } from "react-icons/io";
+import Hamburger from 'hamburger-react'
 import { FaLinkedin, FaGithub, FaInstagram, FaItchIo } from "react-icons/fa";
 import { NavLink, Link } from "react-router-dom";
 
 
 const Header = () => {
-  const [isOpen, setMenu] = useState(false);
-  const handleClick = () => setMenu(!isOpen);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => setIsOpen(!isOpen);
   const closeMenu = () => setMenu(false);
 
   //navbar state
@@ -22,36 +21,32 @@ const Header = () => {
   })
 
   return (
-    <header
-      className={` ${
-        isActive ? "bg-white py-4 shadow-md" : "bg-none py-6"
-      } fixed w-full h-[80px] bg-white flex justify-between px-5 items-center z-10 transition-all`}
-    >
+    <header className={`${isActive ? "shadow-md" : ""} fixed w-full h-[80px] bg-white flex justify-between px-5  md:px-10 items-center z-10 transition-all`}>
+    {/*logo header*/}
       <div>
-        <img className=" h-7" src={Logo} alt="Logo Image" />
+        <img className=" h-7" src={Logo} alt="Logo image" />
       </div>
-      <ul className="hidden gap-10 md:flex ">
-        <NavLink to="/" onClick={closeMenu}>
+       {/*nav-links*/}
+      <ul className="hidden gap-10 md:flex">
+        <NavLink to="/">
           <li>Home</li>
         </NavLink>
-        <NavLink to="/about" onClick={closeMenu}>
+        <NavLink to="/about">
           <li>About</li>
         </NavLink>
-        <NavLink to="/projects" onClick={closeMenu}>
-          <li>Projects</li>
+        <NavLink to="/portfolio">
+          <li>Portfolio</li>
         </NavLink>
-        <NavLink to="/contacts" onClick={closeMenu}>
+        <NavLink to="/contacts">
           <li>Contacts</li>
         </NavLink>
       </ul>
 
-      <div
-        className="z-20 flex text-white cursor-pointer md:hidden"
-        onClick={handleClick}
-      >
-        {!isOpen ? <HiOutlineMenuAlt3 size={30} /> : <IoIosClose size={50} />}
+      <div className="z-20 flex text-black cursor-pointer md:hidden" onClick={handleClick}>
+      {/*side-menu icon*/}
+        <Hamburger direction="left" size={25} color={`${isOpen ? "white" : "black"}`} duration={0.3} rounded />
       </div>
-
+      {/*blurred bg*/}
       <div
         className={
           !isOpen
@@ -60,11 +55,8 @@ const Header = () => {
         }
       ></div>
 
-      <div
-        className={`absolute top-0 right-0 h-screen w-[270px] bg-[#7c7cb3] flex flex-col gap-10 p-4  drop-shadow-xl ${
-          !isOpen ? "translate-x-full" : "translate-x-0"
-        } ease-in-out duration-200`}
-      >
+      {/*side-menu*/}
+      <div className={`absolute top-0 right-0 h-screen w-[270px] bg-[#7c7cb3] flex flex-col gap-10 p-4  ${!isOpen ? "translate-x-full" : "translate-x-0"} ease-in-out duration-200`}>
         <ul className="flex flex-col text-3xl font-semibold text-white gap-7 pt-[60px]">
           <hr className="border-2 rounded-lg border-slate-200" />
           <Link to="/" onClick={closeMenu}>
@@ -73,18 +65,18 @@ const Header = () => {
           <Link to="/about" onClick={closeMenu}>
             <li>About</li>
           </Link>
-          <Link to="/projects" onClick={closeMenu}>
-            <li>Projects</li>
+          <Link to="/portfolio" onClick={closeMenu}>
+            <li>Portfolio</li>
           </Link>
           <Link to="/contacts" onClick={closeMenu}>
             <li>Contacts</li>
           </Link>
         </ul>
         <div className="flex gap-5 pl-4 text-slate-200">
-          <FaGithub className="" size={28} />
-          <FaLinkedin className="" size={28} />
-          <FaInstagram className="" size={28} />
-          <FaItchIo className="" size={28} />
+          <FaGithub size={28} />
+          <FaLinkedin size={28} />
+          <FaInstagram size={28} />
+          <FaItchIo size={28} />
         </div>
       </div>
     </header>

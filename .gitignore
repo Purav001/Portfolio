@@ -25,3 +25,7 @@ dist-ssr
 
 #Global vars
 *.env
+
+
+# Contentlayer
+.contentlayer
