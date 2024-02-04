@@ -27,23 +27,13 @@ const GraphicDesign = () => {
     <section>
       {/*Container*/}
       <div className="pb-8 mx-5 rounded-[30px]">
-        {/*Title*/}
-        <motion.p
-          className="py-5 text-2xl text-center sm:ml-24 sm:text-left"
-          variants={fadeIn("up", 0.1)}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
-        >
-          Graphic designs
-        </motion.p>
         {/*Card container*/}
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 max-w-[1500px] items-center">
           {works.design.map((project, index) => {
             return (
               <motion.div
                 key={index}
-                variants={fadeIn("up", 0.2)}
+                variants={fadeIn("up", project.duration)}
                 initial={"hidden"}
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.1 }}

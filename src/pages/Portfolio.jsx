@@ -13,9 +13,9 @@ const Projects = () => {
 
   return (
     <main>
-        <div className="flex flex-col items-center justify-center gap-10 py-10 text-neutral-800">
+        <div className="flex flex-col items-center py-10 text-neutral-800">
         <motion.div
-            className="mt-[200px] flex text-[35px] font-bold text-center text-v md:text-6xl md:text-left"
+            className="mt-[100px] pb-10 lg:mt-[200px] flex text-[35px] font-bold  text-v md:text-6xl"
             variants={fadeIn("right", 0.1)}
             initial={"hidden"}
             whileInView={"show"}
@@ -28,12 +28,13 @@ const Projects = () => {
                 </TextSpan>
               );
             })}
-
           </motion.div>
+
           <WebDev />
           <Multimedia />
           <ItchGames />
           <GraphicDesign/>
+          
         </div>
     </main>
   );
