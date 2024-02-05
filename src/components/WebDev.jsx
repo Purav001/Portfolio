@@ -9,9 +9,9 @@ const WebDev = () => {
   return (
     <section>
       {/*Container*/}
-      <div className="pb-8 mx-5 rounded-[10px]">
+      <div className="pb-8 mx-5">
         {/*Card container*/}
-        <div className="grid gap-5 md:grid-cols-1 lg:grid-cols-3 max-w-[1500px] items-center">
+        <div className="grid gap-5 lg:grid-cols-3 max-w-[1500px] items-center">
           {works.web.map((project, index) => {
             return (
               <motion.div
@@ -19,17 +19,15 @@ const WebDev = () => {
                 variants={fadeIn("up", project.duration)}
                 initial={"hidden"}
                 whileInView={"show"}
-                viewport={{ once: true, amount: 0.1 }}
+                viewport={{ once: true, amount:'some' }}
               >
                 <div className="grid gap-3 p-8 mx-5 duration-200 ease-in-out bg-white shadow-lg rounded-2xl hover:-translate-y-2">
                   <div className="overflow-hidden max-w-full h-[200px] md:h-[300px] object-cover object-center rounded-lg">
-                    <img className="" src={project.image} />
+                    <img  src={project.image} />
                   </div>
                   <a className="flex items-center gap-2 text-[20px] md:text-2xl font-bold cursor-pointer" href={project.link}>
                     <p className="">{project.title}</p>
-                    <FaExternalLinkAlt
-                      size={15}
-                    />
+                    <FaExternalLinkAlt size={15} />
                   </a>
                   <p>{project.description}</p>
                   <div className="flex flex-wrap items-center gap-2 text-sm">

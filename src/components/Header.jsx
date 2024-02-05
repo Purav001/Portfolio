@@ -24,7 +24,7 @@ const Header = () => {
     <header className={`${isActive ? "shadow-md" : ""} fixed w-full h-[80px] bg-white flex justify-between px-5  md:px-10 items-center z-10 transition-all`}>
     {/*logo header*/}
       <div>
-        <img className=" h-7" src={Logo} alt="Logo image" />
+        <img className="h-6 md:h-7 md" src={Logo} alt="Logo image" />
       </div>
        {/*nav-links*/}
       <ul className="hidden gap-10 md:flex">

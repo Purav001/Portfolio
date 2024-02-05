@@ -16,10 +16,7 @@ export default ({
       },
       colors:  {
         v: '#7c7cb3',
-        vBtn: "#8f8fcd",
-        vBtnHover: "#7c7cb3",
-        vBrd: "#6868cb",
-        vBrdHover: "#afafd8"
+        vBtnHover: "#5b5bae",
       }
     }
 

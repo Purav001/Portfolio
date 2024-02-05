@@ -12,7 +12,7 @@ const TextSpan = ({children}) => {
            "scale3d(.9, 1.05, 1)",
            "scale3d(1, 1, 1)",
          ],
-         color: "#5C4CB3"
+         color: "#5b5bae"
        };
     } 
 

@@ -25,10 +25,9 @@ import touch from "../images/works/Touch.jpg"
 
 
 const web = [
-    {title:"Company website", image: tea, description:"Site created for the company Tea s.r.l.", stack: "Wordpress, Elementor", duration: 0.1, link: "https://www.teacz.com/"},
+    {title:"Personal website", image: ecommerce, description:"My portfolio website", stack: "React.js, TailwindCSS", duration: 0.13, link: "https://georgelafayen.github.io/E-commerce-prototype/"},
     {title:"E-commerce (Demo)",image: ecommerce, description:"An e-commerce prototype site", stack: "React.js, TailwindCSS", duration: 0.12, link: "https://georgelafayen.github.io/E-commerce-prototype/"},
-    {title:"Company website", image: ecommerce, description:"An e-commerce prototype site", stack: "React.js, TailwindCSS", duration: 0.13, link: "https://georgelafayen.github.io/E-commerce-prototype/"},
-    // {title:"Company website", image: ecommerce, description:"An e-commerce prototype site", stack: "React.js, TailwindCSS", duration: 0.13, link: "https://georgelafayen.github.io/E-commerce-prototype/"}
+    {title:"Company website", image: tea, description:"Site created for the company Tea s.r.l.", stack: "Wordpress, Elementor", duration: 0.1, link: "https://www.teacz.com/"},
 ]
 
 const multimedia = [

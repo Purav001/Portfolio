@@ -13,7 +13,7 @@ const Hero = () => {
   const name = "Giorgio Faini".split("");
 
   return (
-    <div className="flex items-center h-screen pt-10 md:pt-0 bg-[#F9F9F9] text-neutral-800">
+    <section className="flex items-center h-screen pt-10 md:pt-0 bg-[#F9F9F9] text-neutral-800">
       <div className="max-w-[1200px] items-center grid mx-auto md:grid-cols-2 gap-7 md:gap-0 lg:gap-16 drop-shadow-sm">
         {/*Immagine*/}
         <motion.img
@@ -84,7 +84,7 @@ const Hero = () => {
             </div>
           </motion.div>
           <motion.p
-            className=" font-light md:text-[22px]"
+            className=" text-neutral-500 md:text-[22px]"
             variants={fadeIn("left", 0.4)}
             initial={"hidden"}
             whileInView={"show"}
@@ -96,14 +96,10 @@ const Hero = () => {
 
           <Link to={"About"}>
             <motion.button
-              className="px-5 py-2 mt-2 font-bold text-white uppercase border-b-4 rounded-lg bg-vBtn hover:bg-vBtnHover border-vBrd hover:border-vBrdHover"
+              className="px-5 py-2 mt-2 font-bold text-white uppercase border-b-4 rounded-lg bg-vBtn bg-v hover:bg-vBtnHover border-vBtnHover hover:border-v"
               variants={fadeIn("left", 0.5)}
               initial={"hidden"}
               whileInView={"show"}
-              whileHover={{
-                   scale: 1.05,
-                  transition: { duration: 0.1 },
-                }}
               viewport={{ once: false, amount: 0.7 }}
             >
               About Me
@@ -111,7 +107,7 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

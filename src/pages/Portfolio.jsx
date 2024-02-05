@@ -15,7 +15,7 @@ const Projects = () => {
     <main>
         <div className="flex flex-col items-center py-10 text-neutral-800">
         <motion.div
-            className="mt-[100px] pb-10 lg:mt-[200px] flex text-[35px] font-bold  text-v md:text-6xl"
+            className="mt-[80px] pb-5 lg:pb-10 lg:mt-[200px] flex text-4xl font-bold  text-v md:text-6xl"
             variants={fadeIn("right", 0.1)}
             initial={"hidden"}
             whileInView={"show"}

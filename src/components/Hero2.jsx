@@ -59,14 +59,10 @@ const Hero2 = () => {
           </div>
 
           <motion.div
-            className="px-5 py-2 mt-2 font-bold text-white uppercase border-b-4 rounded-lg bg-vBtn hover:bg-vBtnHover border-vBrd hover:border-vBrdHover"
+            className="px-5 py-2 mt-2 font-bold text-white uppercase border-b-4 rounded-lg bg-vBtn bg-v hover:bg-vBtnHover border-vBtnHover hover:border-v"
             variants={fadeIn("right", 0.3)}
             initial={"hidden"}
             whileInView={"show"}
-            whileHover={{
-                   scale: 1.05,
-                  transition: { duration: 0.1 },
-                }}
             viewport={{ once: true, amount: 0.7 }}
           >
           <a className='flex items-center gap-2' href={Cv} download="CV-GiorgioFaini" rel="noopener noreferrer">
