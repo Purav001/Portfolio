@@ -8,7 +8,7 @@ import { NavLink, Link } from "react-router-dom";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
-  const closeMenu = () => setMenu(false);
+  const closeMenu = () => setIsOpen(false);
 
   //navbar state
   const [isActive, setIsActive] = useState(false)
@@ -27,7 +27,7 @@ const Header = () => {
       </div>
        {/*nav-links*/}
       <ul className="hidden gap-10 md:flex">
-        <NavLink to="/">
+        <NavLink to="/home">
           <li>Home</li>
         </NavLink>
         <NavLink to="/about">
