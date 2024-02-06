@@ -27,16 +27,16 @@ const Header = () => {
       </div>
        {/*nav-links*/}
       <ul className="hidden gap-10 md:flex">
-        <NavLink to="/Personal-website/home">
+        <NavLink to="/">
           <li>Home</li>
         </NavLink>
-        <NavLink to="/Personal-website/about">
+        <NavLink to="/about">
           <li>About</li>
         </NavLink>
-        <NavLink to="/Personal-website/portfolio">
+        <NavLink to="/portfolio">
           <li>Portfolio</li>
         </NavLink>
-        <NavLink to="/Personal-website/contacts">
+        <NavLink to="/contacts">
           <li>Contacts</li>
         </NavLink>
       </ul>
@@ -58,16 +58,16 @@ const Header = () => {
       <div className={`absolute top-0 right-0 h-screen w-[270px] bg-[#7c7cb3] flex flex-col gap-10 p-4  ${!isOpen ? "translate-x-full" : "translate-x-0"} ease-in-out duration-200`}>
         <ul className="flex flex-col text-3xl font-semibold text-white gap-7 pt-[60px]">
           <hr className="border-2 rounded-lg border-slate-200" />
-          <Link to="/Personal-website/home" onClick={closeMenu}>
+          <Link to="/home" onClick={closeMenu}>
             <li>Home</li>
           </Link>
-          <Link to="/Personal-website/about" onClick={closeMenu}>
+          <Link to="/about" onClick={closeMenu}>
             <li>About</li>
           </Link>
-          <Link to="/Personal-website/portfolio" onClick={closeMenu}>
+          <Link to="/portfolio" onClick={closeMenu}>
             <li>Portfolio</li>
           </Link>
-          <Link to="/Personal-website/contacts" onClick={closeMenu}>
+          <Link to="/contacts" onClick={closeMenu}>
             <li>Contacts</li>
           </Link>
         </ul>

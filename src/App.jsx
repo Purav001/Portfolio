@@ -4,22 +4,22 @@ import Portfolio from "./pages/Portfolio";
 import Contacts from "./pages/Contacts"
 import Footer from './components/Footer'
 import Header from "./components/Header";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route} from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <AnimatePresence>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
-          <Route path="/Personal-website/home" element={<Home />} />
-          <Route path="/Personal-website/about" element={<About />} />
-          <Route path="/Personal-website/portfolio" element={<Portfolio />} />
-          <Route path="/Personal-website/contacts" element={<Contacts />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contacts" element={<Contacts />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </AnimatePresence>
   );
 };
