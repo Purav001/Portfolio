@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 import { Link } from "react-router-dom";
 import TextSpan from "../utils/textSpan";
-import { Tooltip } from 'react-tooltip'
 import { Typewriter } from "react-simple-typewriter";
+
+
 
 
 const Hero = () => {
@@ -13,23 +14,23 @@ const Hero = () => {
   const name = "Giorgio Faini".split("");
 
   return (
-    <section className="flex items-center h-screen pt-10 md:pt-0 bg-[#F9F9F9] text-neutral-800">
-      <div className="max-w-[1200px] items-center grid mx-auto md:grid-cols-2 gap-7 md:gap-0 lg:gap-16 drop-shadow-sm">
-        {/*Immagine*/}
+    <section className="flex items-center h-screen pt-10 md:pt-0 bg-[#F9F9F9] text-neutral-800 ">
+
+    {/*Container*/}
+      <div className="max-w-[1200px] items-center grid mx-auto md:grid-cols-2 gap-7 md:gap-0 lg:gap-16">
+
+        {/*Immagine profilo*/}
         <motion.img
-          data-tooltip-id="george"
-          data-tooltip-content={"Yes, that's me!"}
           variants={fadeIn("right", 0.1)}
           initial={"hidden"}
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
-          className="md:order-1 w-[250px] mx-auto md:w-[500px] xxl:w-[600px] drop-shadow-lg"
+          className="md:order-1 w-[200px] mx-auto md:w-[500px] xxl:w-[600px] drop-shadow-lg"
           src={avatar}
           alt=""
         />
-        <Tooltip id="george" place="top-end" variant="dark" />
 
-        {/*Container Testo*/}
+        {/*Box Testo*/}
         <div className="flex flex-col items-center gap-2 px-5 mx-auto text-center md:gap-4 md:text-right md:items-end">
           <motion.p
             className="md:text-3xl"

@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TextSpan from "../utils/textSpan";
 import { motion } from "framer-motion";
-import mail from "../images/Mail.png";
+import { fadeIn } from "../utils/variants";
+
 
 const EmailForm = () => {
   const name = "Let's get in touch!".split("");
@@ -42,7 +43,13 @@ const EmailForm = () => {
 
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="flex flex-col items-center mt-14 mx-5 w-[1000px]">
+      <motion.div
+        className="flex flex-col items-center mt-14 mx-5 w-[1000px]"
+        variants={fadeIn("down", 0.1)}
+        initial={"hidden"}
+        whileInView={"show"}
+        viewport={{ once: true, amount: 0.7 }}
+      >
         <div>
           <div className="mb-2 text-3xl font-bold text-center md:text-4xl lg:text-6xl text-v">
             {name.map((letter, index) => {
@@ -113,7 +120,7 @@ const EmailForm = () => {
             )}
           </div>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };

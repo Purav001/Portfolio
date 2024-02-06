@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../images/Logo.png";
-import Logo2 from "../images/Logo2.png";
 import Hamburger from 'hamburger-react'
 import { FaLinkedin, FaGithub, FaInstagram, FaItchIo } from "react-icons/fa";
 import { NavLink, Link } from "react-router-dom";

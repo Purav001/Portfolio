@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
-import about from '../images/Georgie-About.png'
+import about from "../images/Georgie-About.png";
 import { FiDownload } from "react-icons/fi";
-import TextSpan from '../utils/textSpan';
-import Cv from "../Data/CV-GiorgioFaini.pdf"
-
+import TextSpan from "../utils/textSpan";
+import Cv from "../Data/CV-GiorgioFaini.pdf";
 
 
 const Hero2 = () => {
-
   const name = "About me.".split("");
 
   return (
@@ -41,7 +39,6 @@ const Hero2 = () => {
                 </TextSpan>
               );
             })}
-            
           </motion.div>
 
           <div className="flex flex-col font-normal text-justify px-5 md:px-0 text-[14px] md:text-[20px] gap-4 max-w-[500px] text-neutral-500">
@@ -65,16 +62,20 @@ const Hero2 = () => {
             whileInView={"show"}
             viewport={{ once: true, amount: 0.7 }}
           >
-          <a className='flex items-center gap-2' href={Cv} download="CV-GiorgioFaini" rel="noopener noreferrer">
-          <FiDownload size={20}/>
-          <p className='font-semibold '>download cv</p>
-          </a>
+            <a
+              className="flex items-center gap-2"
+              href={Cv}
+              download="CV-GiorgioFaini"
+              rel="noopener noreferrer"
+            >
+              <FiDownload size={20} />
+              <p className="font-semibold ">download cv</p>
+            </a>
           </motion.div>
         </div>
-
       </div>
     </section>
   );
-}
+};
 
-export default Hero2
+export default Hero2;

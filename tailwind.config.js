@@ -12,7 +12,7 @@ export default ({
         xxl: "1400px",
       },
       backgroundImage: {
-        "bg": "url('/imges/gradient-bg.jpg')",
+        'bgd': "url('../images/bg.jpg')"
       },
       colors:  {
         v: '#7c7cb3',
