@@ -1,9 +1,9 @@
 import indovina from "../images/works/indovina.gif"
 import gameLab from "../images/works/gameLab.gif"
 import mudima from "../images/works/mudima.gif"
-import g1 from "../images/works/game1.jpg"
-import g2 from "../images/works/game2.jpg"
-import g3 from "../images/works/game3.jpg"
+import g1 from "../images/works/game1.png"
+import g2 from "../images/works/game2.png"
+import g3 from "../images/works/game3.png"
 
 import tea from "../images/works/tea.png"
 import ecommerce from "../images/works/Ecommerce prototype1.png"

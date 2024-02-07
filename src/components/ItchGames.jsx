@@ -7,8 +7,6 @@ import { fadeIn } from "../utils/variants";
 const ItchGames = () => {
   return (
     <section>
-      {/*Container*/}
-      <div className="pb-8 mx-5 ">
         {/*Card container*/}
         <div className="grid gap-5 lg:grid-cols-3 max-w-[1500px] items-center">
           {works.itchGames.map((project, index) => {
@@ -20,15 +18,15 @@ const ItchGames = () => {
                 whileInView={"show"}
                 viewport={{ once: true, amount: 'some' }}
               >
-                <div className="grid gap-3 p-8 mx-5 duration-200 ease-in-out bg-white shadow-lg rounded-2xl hover:-translate-y-2">
-                  <div className="overflow-hidden max-w-full h-[200px] md:h-[300px] rounded-lg ">
-                    <img className="object-contain w-full h-full rounded-lg" src={project.image} />
+                <div className="grid gap-3 p-8 mx-8 duration-200 ease-in-out bg-white shadow-lg rounded-2xl hover:-translate-y-2">
+                  <div className="w-38">
+                    <img src={project.image} />
                   </div>
                   <a className="flex items-center gap-2 text-[20px] md:text-2xl font-bold cursor-pointer" href={project.link}>
                     <p className="">{project.title}</p>
                     <FaExternalLinkAlt size={15} />
                   </a>
-                  <p>{project.description}</p>
+                  <p className="text-sm">{project.description}</p>
                   <div className="flex flex-wrap items-center gap-2 text-sm">
                     <span className="font-semibold">Built with:</span>
                     <span className=" text-vBrd">{project.stack}</span>
@@ -38,7 +36,6 @@ const ItchGames = () => {
             );
           })}
         </div>
-      </div>
     </section>
   );
 };

@@ -11,22 +11,29 @@ const Hero2 = () => {
   const name = "About me.".split("");
 
   return (
-    <section className="bg-[#FAFAFA] min-h-screen flex flex-col items-center justify-center gap-10 pt-[50px] md:pt-0 text-neutral-800">
-      {/*Container Grid*/}
-      <div className="max-w-[1400px] items-center grid md:grid-cols-2 gap-10 md:gap-20">
-        <motion.img
-          variants={fadeIn("left", 0.1)}
-          initial={"hidden"}
-          whileInView={"show"}
-          viewport={{ once: true, amount: 0.7 }}
-          className="w-[250px] mx-auto md:w-[500px] xxl:w-[600px]"
-          src={about}
-          alt=""
-        />
-        {/*Container About-text*/}
-        <div className="grid items-center gap-5 px-8 justify-items-center">
+    <section className="flex flex-col items-center justify-center w-full min-h-screen text-neutral-800 ">
+
+      {/*container*/}
+      <div className="grid items-center gap-4 md:gap-6 lg:gap-8 justify-items-center lg:grid-cols-2">
+
+        {/*image*/}
+        <div className=" w-[230px] md:w-[300px] lg:w-[400px] xxl:w-[500px]">
+          <motion.img
+            variants={fadeIn("left", 0.1)}
+            initial={"hidden"}
+            whileInView={"show"}
+            viewport={{ once: true, amount: 0.7 }}
+            src={about}
+            alt="A fun vector image depicting Giorgio Faini working on his pc"
+          />
+        </div>
+
+        {/*text-box*/}
+        <div className="grid items-center gap-1 md:gap-2 lg:gap-3 justify-items-center w-[300px] md:w-[400px]">
+
+          {/*title*/}
           <motion.div
-            className="flex text-[35px] font-bold text-center text-v md:text-6xl md:text-left"
+            className="text-3xl font-bold text-center md:text-4xl lg:text-5xl text-v"
             variants={fadeIn("right", 0.1)}
             initial={"hidden"}
             whileInView={"show"}
@@ -41,7 +48,8 @@ const Hero2 = () => {
             })}
           </motion.div>
 
-          <div className="flex flex-col font-normal text-justify px-5 md:px-0 text-[14px] md:text-[20px] gap-4 max-w-[500px] text-neutral-500">
+          {/*text*/}
+          <div className="flex flex-col text-justify text-neutral-500 ">
             <motion.p
               variants={fadeIn("right", 0.2)}
               initial={"hidden"}
@@ -55,8 +63,9 @@ const Hero2 = () => {
             </motion.p>
           </div>
 
+          {/*cv button*/}
           <motion.div
-            className="px-5 py-2 mt-2 font-bold text-white uppercase border-b-4 rounded-lg bg-vBtn bg-v hover:bg-vBtnHover border-vBtnHover hover:border-v"
+            className="px-5 py-2 mt-2 text-sm font-bold text-white uppercase border-b-4 rounded-full bg-vBtn bg-v hover:bg-vBtnHover border-vBtnHover hover:border-v"
             variants={fadeIn("right", 0.3)}
             initial={"hidden"}
             whileInView={"show"}

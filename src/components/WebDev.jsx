@@ -8,8 +8,6 @@ import { fadeIn } from "../utils/variants";
 const WebDev = () => {
   return (
     <section>
-      {/*Container*/}
-      <div className="pb-8 mx-5">
         {/*Card container*/}
         <div className="grid gap-5 lg:grid-cols-3 max-w-[1500px] items-center">
           {works.web.map((project, index) => {
@@ -21,9 +19,9 @@ const WebDev = () => {
                 whileInView={"show"}
                 viewport={{ once: true, amount:'some' }}
               >
-                <div className="grid gap-3 p-8 mx-5 duration-200 ease-in-out bg-white shadow-lg rounded-2xl hover:-translate-y-2">
-                  <div className="overflow-hidden max-w-full h-[200px] md:h-[300px] object-cover object-center rounded-lg">
-                    <img  src={project.image} />
+                <div className="grid gap-3 p-8 mx-8 duration-200 ease-in-out bg-white shadow-lg rounded-2xl hover:-translate-y-2">
+                  <div className="max-w-full overflow-hidden ">
+                    <img src={project.image} />
                   </div>
                   <a className="flex items-center gap-2 text-[20px] md:text-2xl font-bold cursor-pointer" href={project.link}>
                     <p className="">{project.title}</p>
@@ -39,7 +37,6 @@ const WebDev = () => {
             );
           })}
         </div>
-      </div>
     </section>
   );
 }

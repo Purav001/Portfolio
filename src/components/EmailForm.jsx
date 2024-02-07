@@ -42,72 +42,71 @@ const EmailForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <motion.div
-        className="flex flex-col items-center mt-14 mx-5 w-[1000px]"
-        variants={fadeIn("down", 0.1)}
-        initial={"hidden"}
-        whileInView={"show"}
-        viewport={{ once: true, amount: 0.7 }}
-      >
-        <div>
-          <div className="mb-2 text-3xl font-bold text-center md:text-4xl lg:text-6xl text-v">
-            {name.map((letter, index) => {
-              return (
-                <TextSpan key={index}>
-                  {letter === " " ? "\u00A0" : letter}
-                </TextSpan>
-              );
-            })}
-          </div>
-          <p className="my-2 text-sm text-center md:my-2 lg:my-5 md:text-md lg:text-lg text-neutral-800">
-            Leave your details and a short message below
-          </p>
+    <motion.div
+      className="flex flex-col items-center justify-center min-h-screen gap-4"
+      variants={fadeIn("down", 0.1)}
+      initial={"hidden"}
+      whileInView={"show"}
+      viewport={{ once: true, amount: 0.7 }}
+    >
+      {/*title*/}
+      <div className="flex flex-col gap-2">
+        <div className="text-3xl font-bold text-center text-v">
+          {name.map((letter, index) => {
+            return (
+              <TextSpan key={index}>
+                {letter === " " ? "\u00A0" : letter}
+              </TextSpan>
+            );
+          })}
         </div>
+        <p className="text-sm text-center text-neutral-800">
+          Leave your details and a short message below
+        </p>
+      </div>
 
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="flex flex-col w-full p-4 bg-gray-100 rounded-lg shadow-lg md:gap-2"
-        >
+      <form ref={form} onSubmit={sendEmail}>
+        {/*container*/}
+        <div className="w-full mx-auto bg-gray-100 rounded-lg shadow-lg p-7">
+
+          {/*name and email*/}
           <div className="flex flex-col md:flex-row md:justify-between md:gap-4">
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col">
               <label className="font-medium">Full name</label>
               <input
                 type="text"
                 name="user_name"
-                className="w-full p-5 mb-2 rounded-lg md:h-14 placeholder:text-sm placeholder:italic focus:outline-v"
+                className="w-full h-12 p-5 mb-2 font-light rounded-lg md:h-14 placeholder:text-sm placeholder:opacity-80 placeholder:italic focus:outline-v"
                 placeholder="Enter your name"
                 required
               />
             </div>
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col">
               <label className="font-medium">Email</label>
               <input
                 type="email"
                 name="user_email"
-                className="w-full p-5 mb-2 rounded-lg md:h-14 placeholder:text-sm placeholder:italic focus:outline-v"
+                className="w-full h-12 p-5 mb-2 font-light rounded-lg md:h-14 placeholder:text-sm placeholder:opacity-80 placeholder:italic focus:outline-v"
                 placeholder="Enter your email"
                 required
               />
             </div>
           </div>
-
           <div className="flex flex-col items-center">
             <div className="w-full">
               <label className="font-medium">Message</label>
               <textarea
                 name="message"
-                className="w-full p-5 mb-3 font-light rounded-lg md:h-48 placeholder:text-sm placeholder:italic focus:outline-v "
+                className="w-full p-5 mb-3 font-light rounded-lg md:h-48 placeholder:text-sm placeholder:opacity-80 placeholder:italic focus:outline-v "
                 placeholder="What would you like to ask me?"
-                rows={5}
+                rows={3}
                 required
               />
             </div>
             <button
               type="submit"
               value="Send"
-              className="w-full py-2 text-xl font-semibold text-white transition duration-200 border-b-4 rounded-lg bg-v hover:bg-vBtnHover border-vBtnHover hover:border-v"
+              className="w-full py-2 text-sm font-semibold text-white border-b-4 rounded-full bg-v hover:bg-vBtnHover border-vBtnHover hover:border-v"
               disabled={sending}
             >
               {sending ? "Sending Message..." : "Send Message"}
@@ -119,9 +118,9 @@ const EmailForm = () => {
               </p>
             )}
           </div>
-        </form>
-      </motion.div>
-    </div>
+        </div>
+      </form>
+    </motion.div>
   );
 };
 

@@ -10,12 +10,14 @@ const Skills = () => {
   const name = "My skill-set.".split("");
 
   return (
-    <>
-      <section className="flex items-center justify-center min-h-screen pb-10 md:flex">
+      <section className="flex flex-col items-center justify-center w-full min-h-screen">
+
+        {/*container*/}
+        <div className="grid items-center w-full gap-8 justify-items-center">
+
         {/*title*/}
-        <div className="grid items-center gap-0 md:gap-12 justify-items-center">
           <motion.div
-            className="relative mt-20 mb-10 text-2xl font-bold text-center md:mt-0 md:mb-0 md:text-3xl lg:text-6xl text-v "
+            className="text-3xl font-bold text-center md:text-4xl lg:text-5xl text-v "
             variants={fadeIn("right", 0.1)}
             initial={"hidden"}
             whileInView={"show"}
@@ -30,12 +32,12 @@ const Skills = () => {
             })}
           </motion.div>
 
-          {/*skills*/}
-          <div className="grid grid-cols-4 gap-5 mx-10 lg:grid-cols-5 lg:gap-10">
+          {/*skills-stack*/}
+          <div className="grid grid-cols-4 gap-3 mx-auto md:gap-6 lg:gap-8 lg:grid-cols-5 ">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
-                className={`flex flex-col w-[70px] h-[70px] lg:w-[100px] lg:h-[100px] rounded-[10px] items-center justify-center bg-white shadow-lg ${skill.shadow}`}
+                className={`flex flex-col rounded-xl w-[70px] h-[70px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] items-center justify-center bg-white shadow-lg ${skill.shadow}`}
                 variants={fadeIn("up", skill.duration)}
                 initial={"hidden"}
                 whileInView={"show"}
@@ -55,7 +57,6 @@ const Skills = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 
