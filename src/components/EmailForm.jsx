@@ -51,7 +51,7 @@ const EmailForm = () => {
     >
       {/*title*/}
       <div className="flex flex-col gap-2">
-        <div className="text-3xl font-bold text-center text-v">
+        <div className="text-3xl font-bold text-center md:text-4xl lg:text-5xl text-v">
           {name.map((letter, index) => {
             return (
               <TextSpan key={index}>
@@ -60,7 +60,7 @@ const EmailForm = () => {
             );
           })}
         </div>
-        <p className="text-sm text-center text-neutral-800">
+        <p className="text-sm text-center md:text-md lg:text-lg text-neutral-800">
           Leave your details and a short message below
         </p>
       </div>

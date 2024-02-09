@@ -21,8 +21,6 @@ const GraphicDesign = () => {
 
   return (
     <section>
-      {/*Container*/}
-      <div className="pb-8 mx-5 ">
         {/*Card container*/}
         <div className="grid gap-5 lg:grid-cols-3 max-w-[1500px] items-center">
           {works.design.map((project, index) => {
@@ -34,33 +32,33 @@ const GraphicDesign = () => {
                 whileInView={"show"}
                 viewport={{ once: true, amount: 'some' }}
               >
-                <div className="grid gap-3 p-8 mx-5 duration-200 ease-in-out bg-white shadow-lg rounded-2xl hover:-translate-y-3">
+                {/*image and text*/}
+                <div className="grid gap-2 p-8 mx-8 duration-200 ease-in-out bg-white shadow-lg lg:mx-0 rounded-2xl lg:hover:-translate-y-3">
+                  {/*image*/}
                   <Carousel
-                    className="rounded-lg"
                     defaultControlsConfig={config}
                     wrapAround
                     autoplay
                   >
                     {project.image.map((pic, index) => (
-                      <div className="md:h-[300px] h-[200px] max-w-full">
-                        <img className="object-contain w-full h-full" key={index} src={pic} />
+                      <div key={index} className="md:h-[300px] h-[200px] max-w-full ">
+                        <img className="object-cover w-full h-full rounded-lg" src={pic} />
                       </div>
                     ))}
                   </Carousel>
 
                   <p className="text-[20px] md:text-2xl font-bold cursor-pointer">{project.title}</p>
 
-                  <p>{project.description}</p>
+
                   <div className="flex flex-wrap items-center gap-2 text-sm">
                     <span className="font-semibold">Built with:</span>
-                    <span className=" text-vBrd">{project.stack}</span>
+                    <span className=" text-v">{project.stack}</span>
                   </div>
                 </div>
               </motion.div>
             );
           })}
         </div>
-      </div>
     </section>
   );
 };

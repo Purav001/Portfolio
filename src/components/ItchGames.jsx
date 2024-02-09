@@ -1,6 +1,6 @@
 import React from "react";
 import works from "../Data/works";
-import { FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import { FaExternalLinkAlt} from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 
@@ -18,18 +18,22 @@ const ItchGames = () => {
                 whileInView={"show"}
                 viewport={{ once: true, amount: 'some' }}
               >
-                <div className="grid gap-3 p-8 mx-8 duration-200 ease-in-out bg-white shadow-lg rounded-2xl hover:-translate-y-2">
-                  <div className="w-38">
-                    <img src={project.image} />
-                  </div>
+
+                {/*image and text*/}
+                <div className="grid gap-2 p-8 mx-8 overflow-hidden duration-200 ease-in-out bg-white shadow-lg lg:mx-0 rounded-2xl lg:hover:-translate-y-2">
+                  {/*image*/}
+                  <img className="max-w-full rounded-md" src={project.image} />
+                  {/*title*/}
                   <a className="flex items-center gap-2 text-[20px] md:text-2xl font-bold cursor-pointer" href={project.link}>
                     <p className="">{project.title}</p>
                     <FaExternalLinkAlt size={15} />
                   </a>
-                  <p className="text-sm">{project.description}</p>
+                  {/*description*/}
+                  <p>{project.description}</p>
+                  {/*tech*/}
                   <div className="flex flex-wrap items-center gap-2 text-sm">
                     <span className="font-semibold">Built with:</span>
-                    <span className=" text-vBrd">{project.stack}</span>
+                    <span className=" text-v">{project.stack}</span>
                   </div>
                 </div>
               </motion.div>

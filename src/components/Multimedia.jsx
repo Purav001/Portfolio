@@ -17,20 +17,20 @@ const Multimedia = () => {
               whileInView={"show"}
               viewport={{ once: true, amount: "some" }}
             >
-              <div className="grid gap-3 p-8 mx-8 duration-200 ease-in-out bg-white shadow-lg rounded-2xl hover:-translate-y-3">
-                <img
-                  
-                  
-                  src={project.image}
-                />
-
+              {/*image and text*/}
+              <div className="grid gap-2 p-8 mx-8 duration-200 ease-in-out bg-white shadow-lg lg:mx-0 rounded-2xl lg:hover:-translate-y-3">
+                {/*image*/}
+                <img className="max-w-full rounded-md" src={project.image} />
+                {/*title*/}
                 <div className="text-[20px] md:text-2xl font-bold cursor-pointer">
-                  <p className="">{project.title}</p>
+                  <p>{project.title}</p>
                 </div>
+                {/*description*/}
                 <p>{project.description}</p>
+                {/*tech*/}
                 <div className="flex flex-wrap items-center gap-2 text-sm">
                   <span className="font-semibold">Built with:</span>
-                  <span className=" text-vBrd">{project.stack}</span>
+                  <span className=" text-v">{project.stack}</span>
                 </div>
               </div>
             </motion.div>

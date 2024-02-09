@@ -19,7 +19,7 @@ const Hero2 = () => {
         {/*image*/}
         <div className=" w-[230px] md:w-[300px] lg:w-[400px] xxl:w-[500px]">
           <motion.img
-            variants={fadeIn("left", 0.1)}
+            variants={fadeIn("up", 0.1)}
             initial={"hidden"}
             whileInView={"show"}
             viewport={{ once: true, amount: 0.7 }}
@@ -34,7 +34,7 @@ const Hero2 = () => {
           {/*title*/}
           <motion.div
             className="text-3xl font-bold text-center md:text-4xl lg:text-5xl text-v"
-            variants={fadeIn("right", 0.1)}
+            variants={fadeIn("down", 0.1)}
             initial={"hidden"}
             whileInView={"show"}
             viewport={{ once: true, amount: 0.7 }}
@@ -51,7 +51,7 @@ const Hero2 = () => {
           {/*text*/}
           <div className="flex flex-col text-justify text-neutral-500 ">
             <motion.p
-              variants={fadeIn("right", 0.2)}
+              variants={fadeIn("down", 0.2)}
               initial={"hidden"}
               whileInView={"show"}
               viewport={{ once: true, amount: 0.7 }}
@@ -66,7 +66,7 @@ const Hero2 = () => {
           {/*cv button*/}
           <motion.div
             className="px-5 py-2 mt-2 text-sm font-bold text-white uppercase border-b-4 rounded-full bg-vBtn bg-v hover:bg-vBtnHover border-vBtnHover hover:border-v"
-            variants={fadeIn("right", 0.3)}
+            variants={fadeIn("down", 0.3)}
             initial={"hidden"}
             whileInView={"show"}
             viewport={{ once: true, amount: 0.7 }}
