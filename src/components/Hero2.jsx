@@ -52,10 +52,10 @@ const Hero2 = () => {
                 viewport={{ once: true, amount: 0.7 }}
               >
                 I am a constantly evolving web developer passionate about
-                crafting captivating crafting captivating web solutions with
-                great attention to detail. I also enojy
-                developing 2D games and applications for edutainment and
-                gamification, merging innovation with skill.
+                designing captivating web solutions with great attention to
+                detail. I also enjoy developing 2d games and applications for
+                edutainment and gamification, blending creativity with
+                technology.
               </motion.p>
             </div>
             {/*cv button*/}
