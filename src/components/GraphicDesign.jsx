@@ -1,8 +1,6 @@
 import React from "react";
-import works from "../Data/works";
-
+import works from "../constants/works";
 import Carousel from "nuka-carousel";
-
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 

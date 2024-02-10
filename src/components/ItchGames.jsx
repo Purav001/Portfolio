@@ -1,8 +1,8 @@
 import React from "react";
-import works from "../Data/works";
-import { FaExternalLinkAlt} from "react-icons/fa";
+import works from "../constants/works";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
+import { FaExternalLinkAlt} from "react-icons/fa";
 
 const ItchGames = () => {
   return (

@@ -11,9 +11,6 @@ export default ({
         xl: "1280px",
         xxl: "1440px",
       },
-      backgroundImage: {
-        'bgd': "url('../images/bg.jpg')"
-      },
       colors:  {
         v: '#7c7cb3',
         vBtnHover: "#5b5bae",

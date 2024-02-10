@@ -1,8 +1,8 @@
 import React from "react";
-import works from "../Data/works";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import works from "../constants/works";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const WebDev = () => {
   return (
@@ -25,7 +25,7 @@ const WebDev = () => {
                 <img className="max-w-full rounded-md" src={project.image} />
                 {/*title*/}
                 <a className="flex items-center gap-2 text-[20px] md:text-2xl font-bold cursor-pointer" href={project.link}>
-                  <p className="">{project.title}</p>
+                  <p>{project.title}</p>
                   <FaExternalLinkAlt size={15} />
                 </a>
                 {/*description*/}

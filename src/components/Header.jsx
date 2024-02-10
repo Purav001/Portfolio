@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../images/Logo.png";
 import {Sling as Hamburger} from 'hamburger-react'
-import { FaLinkedin, FaGithub, FaInstagram, FaItchIo } from "react-icons/fa";
 import { NavLink, Link } from "react-router-dom";
+import { FaLinkedin, FaGithub, FaInstagram, FaItchIo } from "react-icons/fa";
+import Logo from "../images/Logo.png";
 
 
 const Header = () => {

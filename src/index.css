@@ -24,21 +24,24 @@
   span {
     display: inline-block;
   }
-  
+
   ::-webkit-scrollbar {
     width: 10px;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-[#9191b3]; /* Colore della barra di scorrimento */
+    @apply bg-[#9191b3];
+    /* scroll bar color */
     @apply rounded-full;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-300; /* Colore dello sfondo della barra di scorrimento */
+    @apply bg-gray-300;
+    /* bg scroll bar color */
   }
 }
 
-.active{
-  @apply  font-bold border-b-4 border-[#7c7cb3] duration-300 transition-all ease-in-out;
+.active {
+  @apply font-bold border-b-4 border-[#7c7cb3] duration-300 transition-all ease-in-out;
 }
+

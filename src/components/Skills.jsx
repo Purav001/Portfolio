@@ -1,21 +1,18 @@
 import React from "react";
-import skills from '../Data/skills'
+import skills from "../constants/skills";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
-import TextSpan from '../utils/textSpan';
-
+import TextSpan from "../utils/textSpan";
 
 const Skills = () => {
-
   const name = "My skill-set.".split("");
 
   return (
-      <section className="flex flex-col items-center justify-center w-full min-h-screen">
-
+    <section>
+      <div className="flex flex-col items-center justify-center w-full min-h-screen">
         {/*container*/}
         <div className="grid items-center w-full gap-8 justify-items-center">
-
-        {/*title*/}
+          {/*title*/}
           <motion.div
             className="text-3xl font-bold text-center md:text-4xl lg:text-5xl text-v "
             variants={fadeIn("right", 0.1)}
@@ -31,7 +28,6 @@ const Skills = () => {
               );
             })}
           </motion.div>
-
           {/*skills-stack*/}
           <div className="grid grid-cols-4 gap-3 mx-auto md:gap-6 lg:gap-8 lg:grid-cols-5 ">
             {skills.map((skill, index) => (
@@ -56,9 +52,9 @@ const Skills = () => {
             ))}
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   );
 };
 
 export default Skills;
-

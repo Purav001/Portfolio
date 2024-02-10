@@ -16,7 +16,6 @@ import Ps from "../images/icons/photoshop.svg";
 import Il from "../images/icons/illustrator.svg";
 import Ae from "../images/icons/aftereffects.svg";
 import Pp from "../images/icons/premiere.svg";
-import Ableton from "../images/icons/ableton.svg"
 import Vs from "../images/icons/vscode.svg"
 import Vite from "../images/icons/vite.svg"
 

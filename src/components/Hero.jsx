@@ -1,10 +1,10 @@
 import React from "react";
-import avatar from "../images/Georgie-Home.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 import { Link } from "react-router-dom";
 import TextSpan from "../utils/textSpan";
 import { Typewriter } from "react-simple-typewriter";
+import avatar from "../images/Georgie-Home.png";
 
 
 const Hero = () => {
