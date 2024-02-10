@@ -22,7 +22,7 @@ const Multimedia = () => {
                 {/*image*/}
                 <img className="max-w-full rounded-md" src={project.image} />
                 {/*title*/}
-                <div className="text-[20px] md:text-2xl font-bold cursor-pointer">
+                <div className="text-[20px] md:text-2xl font-bold">
                   <p>{project.title}</p>
                 </div>
                 {/*description*/}

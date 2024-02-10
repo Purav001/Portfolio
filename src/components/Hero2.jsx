@@ -15,7 +15,7 @@ const Hero2 = () => {
         {/*container*/}
         <div className="grid items-center gap-4 md:gap-6 lg:gap-8 justify-items-center lg:grid-cols-2">
           {/*image*/}
-          <div className=" w-[230px] md:w-[300px] lg:w-[400px] xxl:w-[500px]">
+          <div className=" w-[200px] md:w-[300px] lg:w-[400px] xxl:w-[500px]">
             <motion.img
               variants={fadeIn("up", 0.1)}
               initial={"hidden"}
@@ -51,10 +51,11 @@ const Hero2 = () => {
                 whileInView={"show"}
                 viewport={{ once: true, amount: 0.7 }}
               >
-                Passionate developer, always curious and eager to learn.
-                Specializing in web design, I create 2D games and engage in
-                graphic design. Embracing challenges, I strive for continuous
-                growth in both development and design realms.
+                I am a constantly evolving web developer passionate about
+                crafting captivating crafting captivating web solutions with
+                great attention to detail. I also enojy
+                developing 2D games and applications for edutainment and
+                gamification, merging innovation with skill.
               </motion.p>
             </div>
             {/*cv button*/}

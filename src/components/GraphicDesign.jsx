@@ -45,9 +45,7 @@ const GraphicDesign = () => {
                     ))}
                   </Carousel>
 
-                  <p className="text-[20px] md:text-2xl font-bold cursor-pointer">{project.title}</p>
-
-
+                  <p className="text-[20px] md:text-2xl font-bold ">{project.title}</p>
                   <div className="flex flex-wrap items-center gap-2 text-sm">
                     <span className="font-semibold">Built with:</span>
                     <span className=" text-v">{project.stack}</span>

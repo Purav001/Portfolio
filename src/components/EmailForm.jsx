@@ -43,7 +43,7 @@ const EmailForm = () => {
   return (
     <section>
       <motion.div
-        className="flex flex-col items-center justify-center min-h-screen gap-4"
+        className="flex flex-col items-center justify-center min-h-screen gap-4 mx-5"
         variants={fadeIn("down", 0.1)}
         initial={"hidden"}
         whileInView={"show"}

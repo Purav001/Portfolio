@@ -22,9 +22,13 @@ const WebDev = () => {
               {/*image and text*/}
               <div className="grid gap-2 p-8 mx-8 duration-200 ease-in-out bg-white shadow-lg lg:mx-0 rounded-2xl lg:hover:-translate-y-2">
                 {/*image*/}
-                <img className="max-w-full rounded-md" src={project.image} />
-                {/*title*/}
+                
                 <a className="flex items-center gap-2 text-[20px] md:text-2xl font-bold cursor-pointer" href={project.link}>
+                  <img className="max-w-full rounded-md" src={project.image} />
+                </a>
+
+                {/*title*/}
+                <a className="flex items-center gap-2 text-[20px] md:text-2xl font-bold">
                   <p>{project.title}</p>
                   <FaExternalLinkAlt size={15} />
                 </a>
