@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 import Multimedia from "../components/Multimedia";
@@ -10,6 +10,10 @@ import TextSpan from '../utils/textSpan';
 
 const Projects = () => {
   const name = "My projects.".split("");
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 
   return (
     <main>

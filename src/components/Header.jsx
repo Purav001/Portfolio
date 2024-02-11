@@ -70,11 +70,19 @@ const Header = () => {
               <li>Contacts</li>
             </Link>
           </ul>
-          <div className="flex gap-5 pl-4 text-slate-200">
-            <FaGithub size={28} />
-            <FaLinkedin size={28} />
-            <FaInstagram size={28} />
-            <FaItchIo size={28} />
+          <div className="flex gap-5 text-slate-200">
+            <a href="https://github.com/Georgelafayen">
+              <FaGithub size={25} />
+            </a>
+            <a href="https://www.linkedin.com/in/giorgiofaini/">
+              <FaLinkedin size={25} />
+            </a>
+            <a href="https://www.instagram.com/georgelafayen/">
+              <FaInstagram size={25} />
+            </a>
+            <a href="https://lafayenbros.itch.io/">
+              <FaItchIo size={25} />
+            </a>
           </div>
         </div>
       </div>
