@@ -71,18 +71,16 @@ const Header = () => {
             </Link>
           </ul>
           <div className="flex gap-5 text-slate-200">
-            <a href="https://github.com/Georgelafayen">
+            <a href="https://github.com/purav001">
               <FaGithub size={25} />
             </a>
-            <a href="https://www.linkedin.com/in/giorgiofaini/">
+            <a href="https://www.linkedin.com/in/puravsaluja4/">
               <FaLinkedin size={25} />
             </a>
-            <a href="https://www.instagram.com/georgelafayen/">
+            <a href="https://www.instagram.com/puravsaluja13/">
               <FaInstagram size={25} />
             </a>
-            <a href="https://lafayenbros.itch.io/">
-              <FaItchIo size={25} />
-            </a>
+            
           </div>
         </div>
       </div>

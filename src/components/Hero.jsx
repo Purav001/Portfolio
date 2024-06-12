@@ -9,7 +9,7 @@ import avatar from "../images/Georgie-Home.png";
 
 const Hero = () => {
   
-  const name = "Giorgio Faini".split("");
+  const name = "Purav Saluja".split("");
 
   return (
     <section>
@@ -24,7 +24,7 @@ const Hero = () => {
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.7 }}
                 src={avatar}
-                alt="A fun vector image depicting Giorgio Faini"
+                alt="A fun vector image depicting Purav Saluja"
               />
             </div>
           {/*text box*/}
@@ -67,9 +67,11 @@ const Hero = () => {
               <div className=" text-neutral-800 text-[20px] font-semibold md:text-[24px] lg:text-3xl">
                 <Typewriter
                   words={[
-                    "Frontend Developer",
-                    "Game Developer",
-                    "Graphic Designer",
+                    "Freelancer",
+                    "ReactJs Developer",
+                    "NextJs Developer",
+                    "MERN Stack Developer",
+                    
                   ]}
                   typeSpeed={50}
                   deleteSpeed={50}
@@ -86,8 +88,7 @@ const Hero = () => {
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
             >
-              Constantly focused on learning and expanding my expertise, crafting
-              ever-improving, high-performing solutions.
+              A passionate MERN stack developer, constantly focused on learning and expanding my expertise, crafting ever-improving, high-performing web solutions.
             </motion.p>
             <Link to={"About"}>
               <motion.button
