@@ -52,7 +52,7 @@ const Skills = () => {
             {slicedSkills.map((skill, index) => (
               <motion.div
                 key={index}
-                className={`flex flex-col rounded-xl w-[55px] h-[55px] md:w-[70px] md:h-[70px] lg:w-[90px] lg:h-[90px] items-center justify-center bg-black shadow-lg ${skill.shadow}`}
+                className={`flex flex-col rounded-xl w-[55px] h-[55px] md:w-[70px] md:h-[70px] lg:w-[90px] lg:h-[90px] items-center justify-center bg-white shadow-lg ${skill.shadow}`}
                 variants={fadeIn("up", skill.duration)}
                 initial="hidden"
                 whileInView="show"
