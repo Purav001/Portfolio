@@ -73,7 +73,7 @@ const Hero2 = () => {
               <a
                 className="flex items-center gap-2"
                 href={"https://drive.google.com/file/d/1JNAAzPekGxUVHyx-ds1tilTGLlXmweVT/view?usp=drive_link"}
-                download="CV-GiorgioFaini"
+                download="CV-PuravSaluja"
                 target="_blank"
                 rel="noopener noreferrer"
               >
