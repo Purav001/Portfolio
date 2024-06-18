@@ -65,9 +65,7 @@ const EmailForm = () => {
           </p>
         </div>
         <form ref={form} onSubmit={sendEmail}>
-          {/*container*/}
           <div className="w-full mx-auto bg-gray-100 rounded-lg shadow-lg p-7">
-            {/*name and email*/}
             <div className="flex flex-col md:flex-row md:justify-between md:gap-4">
               <div className="flex flex-col">
                 <label className="font-medium">Full name</label>
