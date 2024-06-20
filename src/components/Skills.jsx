@@ -33,7 +33,7 @@ const Skills = () => {
         <div className="grid items-center gap-8 justify-items-center">
           {/*title*/}
           <motion.div
-            className="text-3xl font-bold text-center md:text-4xl lg:text-5xl text-purple-500"
+            className="text-3xl font-bold text-center md:text-4xl lg:text-5xl text-neutral-800"
             variants={fadeIn("right", 0.1)}
             initial="hidden"
             whileInView="show"
