@@ -18,6 +18,9 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
+        <About />
+        <Portfolio />
+        <Contacts />
         <Footer />
       </Router>
     </AnimatePresence>
