@@ -25,7 +25,7 @@ const Header = () => {
         <Link to="/">
           <img className="h-6 sm:max-h-7" src={Logo} alt="Logo image" />
         </Link>
-         {/*nav-links*/}
+        {/*nav-links*/}
         <ul className="hidden gap-10 md:flex">
           <NavLink to="/">
             <li>Home</li>
